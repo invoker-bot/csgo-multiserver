@@ -11,7 +11,7 @@ Launch and set up **Counter-Strike: Global Offensive** Dedicated Servers.
 
 Being specifically designed for LAN environments, it allows you to control many servers running on multiple machines simultaneously. In addition, multiple server instances can share the same base files, saving your precious disk space and bandwidth.
 
-*csgo-multiserver* started as a fork of [csgo-server-launcher](https://github.com/crazy-max/csgo-server-launcher), but by now, all features have been rewritten by scratch.
+*csgo-multiserver* started as a fork of [dasisdormax/csgo-multiserver](https://github.com/dasisdormax/csgo-multiserver.git), but by now, all features have been rewritten by scratch.
 
 ### About Release 2.0
 
@@ -90,7 +90,7 @@ The server settings themselves are instance-specific and can be configured in `~
 #### Steps for the server administrator
 
 1. (Optional, if you want to use installation sharing) Create a separate _admin_ user (__NOT root__, usually called _steam_) that controls SteamCMD and the base installation. You can, of course, be your own admin.
-2. Use `git clone https://github.com/dasisdormax/csgo-multiserver.git` to clone this repository to whatever place you like (preferably within the admin's home directory ~admin). Make sure this directory and all files in it are readable to all users who will use this script.
+2. Use `git clone https://github.com/invoker-bot/csgo-multiserver.git` to clone this repository to whatever place you like (preferably within the admin's home directory ~admin). Make sure this directory and all files in it are readable to all users who will use this script.
 3. For easier invocation of the main script (just by typing `csgo-server` in your terminal), create a symlink with the following command: `ln -s /path/to/csgo-multiserver/msm /usr/local/bin/csgo-server`
 4. As the admin user (__NOT root__), try `csgo-server setup`. This will guide you through creating the initial configuration.
 5. Install updates or the server itself as the admin user with `csgo-server update` (possibly automated by cron)

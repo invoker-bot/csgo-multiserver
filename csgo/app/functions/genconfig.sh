@@ -171,9 +171,14 @@ App::generateServerConfig () {
 			sv_mincmdrate "$TICKRATE"
 			sv_minupdaterate "$TICKRATE"
 			sv_minrate "$(( TICKRATE * 500 ))"
+			sv_enabledownload 1
+			sv_enableupload 1
 
 			exec banned_user.cfg // Read list of banned users
 		EOF
+
+		# Downloads
+		[[ $DOWNLOAD_URL	 ]] && echo "sv_download_url \"$DOWNLOAD_URL\""
 
 		# Conditionals
 		[[ $HOSTIP           ]] && echo "hostip \"$HOSTIP\""
