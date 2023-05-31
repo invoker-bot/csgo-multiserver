@@ -82,7 +82,7 @@ Core.Server::requestStart () {
 	# LAUNCH! (in tmux)
 
 
-	tmux -f "$THIS_DIR/cfg/tmux.conf" -S "$SOCKET" new-session -n "server-control" -s "$APP@$INSTANCE" -d /bin/bash "$INSTANCE_DIR/msm.d/tmp/server-control.sh"
+	tmux -f "$THIS_DIR/tmux.conf" -S "$SOCKET" new-session -n "server-control" -s "$APP@$INSTANCE" -d /bin/bash "$INSTANCE_DIR/msm.d/tmp/server-control.sh"
 
 
 	success <<-EOF

@@ -56,9 +56,8 @@ App::generateServerConfig () {
 			error <<-EOF
 				Cannot host workshop maps without a Steam Web API Key. Please get
 				one at
-
+	
 				      **http://steamcommunity.com/dev/apikey**
-
 				and insert it into your instance's **server.conf**.
 			EOF
 			exit 1
@@ -178,7 +177,7 @@ App::generateServerConfig () {
 		EOF
 
 		# Downloads
-		[[ $DOWNLOAD_URL	 ]] && echo "sv_download_url \"$DOWNLOAD_URL\""
+		[[ $DOWNLOAD_URL	 ]] && echo "sv_downloadurl \"$DOWNLOAD_URL\""
 
 		# Conditionals
 		[[ $HOSTIP           ]] && echo "hostip \"$HOSTIP\""

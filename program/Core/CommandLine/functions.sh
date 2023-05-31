@@ -38,17 +38,20 @@ $(printf "\x1b[36m%s\x1b[m"   "**INSTANCE SELECTION:**")
     \$DEFAULT_INSTANCE in your config file.
 
 $(printf "\x1b[36m%s\x1b[m"   "**INSTANCE-SPECIFIC COMMANDS:**")
-    create   > Create a new server instance
+    list-instances  > List all instances
+    create          > Create a new server instance
     start | stop | restart
-             > Start/Stop/Restart given server instance (using tmux)
-    status   > Check whether the server is currently running
-    console  > Attach (connect) to the server's console. While inside, press
-             > CTRL-D to detach (return to outside) without killing the server
+                    > Start/Stop/Restart given server instance (using tmux)
+    status          > Check whether the server is currently running
+    console         > Attach (connect) to the server's console. While inside, press
+                    > CTRL-D to detach (return to outside) without killing the server
 
 $(printf "\x1b[36m%s\x1b[m"   "**ADMINISTRATION COMMANDS:** working on the base installation")
-    setup    > Configure this program and install dependencies
-    update   > Install/Update the game server
-    validate > Repair broken/missing game files
+    setup             > Configure this program and install dependencies
+    sm:setup          > Install Sourcemod and Metamod
+    sm:install [name] > Install Sourcemod plugins
+    update            > Install/Update the game server
+    validate          > Repair broken/missing game files
 
 Commands will be executed in the order they are given. If a command fails,
 subsequent commands will not be executed.

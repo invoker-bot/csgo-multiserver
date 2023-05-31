@@ -1,7 +1,7 @@
 #! /bin/bash
 ## vim: noet:sw=0:sts=0:ts=4
 
-::registerHook before~App::validateGSLT TokenHelper::handle
+# ::registerHook before~App::validateGSLT TokenHelper::handle
 
 TokenHelper::vars () {
 	TH_HOME="$USER_DIR/$APP/addons/token-helper"
