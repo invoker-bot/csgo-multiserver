@@ -14,11 +14,12 @@ App::isRunnableInstance () [[ -x $INSTANCE_DIR/$SERVER_EXEC ]]
 
 # files/directories to copy fully 
 App::instanceCopiedFiles () { cat <<-EOF ; }
-	csgo/addons
 	csgo/cfg
 	csgo/models
 	csgo/sound
 EOF
+
+# csgo/addons
 
 
 # directories, in which the user can put own files in addition to the provided ones
@@ -34,9 +35,8 @@ EOF
 # files/directories which are not shared between the base installation and the instances
 App::instanceIgnoredFiles () { cat <<-EOF ; }
 	bin/libgcc_s.so.1
-	csgo/addons
 EOF
-
+# csgo/addons
 
 App::finalizeInstance () (
 	# copy presets from app to user config directory

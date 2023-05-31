@@ -57,6 +57,7 @@ done
 ::add Core.BaseInstallation
 ::add Core.Instance
 ::add Core.Server
+::add Core.Sourcemod
 
 ::loadApp
 ::update
